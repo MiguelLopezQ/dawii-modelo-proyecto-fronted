@@ -1,0 +1,32 @@
+.perfil{
+    padding: 0px;
+    padding-left: 320px;
+}
+.nav-item.dropdown{
+    padding-top: 20px;
+}
+.nav-link.dropdown-toggle{
+    padding-left: 10px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    align-content: center;
+
+}
+@media screen and (max-width: 900px){
+	.container{
+		flex-direction: row;
+        justify-content: space-between;
+	}
+    .perfil{
+        padding-left: 30px;
+    }
+    .nav-link.dropdown-toggle{
+        align-self: center;
+    }
+	.navbar-nav .nav-item{
+		align-self: flex-start;
+		width: 11%;
+        font-size: 14px;
+	}
+}
+

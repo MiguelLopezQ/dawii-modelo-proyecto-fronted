@@ -1,0 +1,92 @@
+<app-menu></app-menu>
+<p>Miguel López</p>
+
+<div class="container">
+
+    <form class="content" (submit)="insertado()" [formGroup]="formsRegistra">
+        <!--  -->
+        <div class="submit-form">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <h5>Registro de Marca </h5>
+                </div>
+            </div>
+
+            <div class="row" style="margin-top: 3%">
+                <div class="col-lg-3">
+                    <label for="id_reg_nombre">Nombre</label>
+                    <input formControlName="validaNombre" [(ngModel)]="marca.nombre" type="text"
+                        placeholder="Ingrese el nombre" class="form-control" name="nombre" id="id_reg_nombre" />
+                    <div *ngIf="submitted && formsRegistra.controls.validaNombre.errors" class="invalid">
+                        <ul>
+                            <li>El nombre es obligatorio</li>
+                            <li>El nombre es de 3 a 30 caracteres</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <label for="id_reg_descripcion">Descripción</label>
+                    <input formControlName="validaDescripcion" [(ngModel)]="marca.descripcion" type="text"
+                        placeholder="Ingrese descripción" class="form-control" name="descripcion"
+                        id="id_reg_descripcion" />
+                    <div *ngIf="submitted && formsRegistra.controls.validaDescripcion.errors" class="invalid">
+                        <ul>
+                            <li>La descripción es obligatorio</li>
+                            <li>La descripción es de 3 a 30 caracteres</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <label for="id_reg_fechaVigencia">Fecha de Vigencia</label>
+                                        <input formControlName="validaFecha" [(ngModel)]="marca.fechaVigencia" type="date" placeholder="DD/MM/AAAA" class="form-control" name="fechaVigencia" id="id_reg_fechaVigencia" />
+                                        <div *ngIf="submitted && formsRegistra.controls.validaFecha.errors" class="invalid">
+                                            <ul>
+                                                <li>La fecha de vigencia es obligatorio</li>    
+                                            </ul>
+                                         </div>
+                </div>
+            </div>
+
+            <div class="row" style="margin-top: 3%">
+                <div class="col-lg-3">
+                    <label for="id_reg_certificado">Certificado</label>
+                                        <input formControlName="validaCertificado" [(ngModel)]="marca.certificado" type="text" placeholder="S0000XXXX" class="form-control" name="certificado" id="id_reg_certificado" maxlength="9" />
+                                        <div *ngIf="submitted && formsRegistra.controls.validaCertificado.errors" class="invalid">
+                                            <ul>
+                                                <li>El certificado es obligatorio</li>    
+                                                <li>El certificado es de 9 dígitos tipo S0000XXXX</li>     
+                                            </ul>
+                                         </div>
+                </div>
+
+                <div class="col-lg-3"> <label for="id_reg_pais">País</label>
+                    <select formControlName="validaPais" [(ngModel)]="marca.pais!.idPais"  id="id_reg_pais" name="pais" class="form-control">
+                        <option value="-1"> [Seleccione] </option>
+                        <option *ngFor="let aux of pais" value="{{ aux.idPais }}"> 
+                                    {{ aux.nombre }}
+                        </option>
+                    </select>
+                    <div *ngIf="submitted && formsRegistra.controls.validaPais.errors" class="invalid">
+                        <ul>
+                            <li> El país es obligatorio</li>    
+                        </ul>
+                     </div>
+                </div>
+            </div>
+
+            <div class="row" style="margin-top: 3%">
+                <div class="col-lg-12">
+                    <button class="btn btn-success" [disabled]="submitted && formsRegistra.invalid">Enviar</button>
+                </div>
+            </div>
+
+
+        </div>
+
+    </form>
+
+
+</div>

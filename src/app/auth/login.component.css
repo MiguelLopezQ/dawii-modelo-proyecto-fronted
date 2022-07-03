@@ -1,0 +1,107 @@
+.body {
+    background-image: url('https://images.pexels.com/photos/3183190/pexels-photo-3183190.jpeg?cs=srgb&dl=pexels-fauxels-3183190.jpg&fm=jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    font-family: 'Numans', sans-serif;
+}
+
+.container {
+    align-items: center;
+    justify-content: center;
+    height: 91.5vh;
+}
+
+.card {
+    height: 340px/*(370px)*/
+    ;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 400px;
+    background-color: rgba(238, 221, 221, 0.473) !important;
+}
+
+.card-header h3 {
+    color: white;
+    text-align: center;
+}
+
+.input-group-prepend span {
+    width: 60px;
+    background-color: #FFC312;
+    color: black;
+    border: 0 !important;
+}
+
+input:focus {
+    outline: 0 0 0 0 !important;
+    box-shadow: 0 0 0 0 !important;
+}
+
+.remember {
+    color: white;
+}
+
+.remember input {
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
+    margin-right: 5px;
+}
+
+.btn-log { 
+    color: #000000; 
+    background-color: #FFC312; 
+    border-color: #FFC312; 
+  } 
+   
+  .btn-log:hover, 
+  .btn-log:focus, 
+  .btn-log:active, 
+  .btn-log.active, 
+  .open .dropdown-toggle.btn-log { 
+    color: #000000; 
+    background-color: #FFFFFF; 
+    border-color: #FFC312; 
+  } 
+   
+  .btn-log:active, 
+  .btn-log.active, 
+  .open .dropdown-toggle.btn-log { 
+    background-image: none; 
+  } 
+   
+  .btn-log.disabled, 
+  .btn-log[disabled], 
+  fieldset[disabled] .btn-log, 
+  .btn-log.disabled:hover, 
+  .btn-log[disabled]:hover, 
+  fieldset[disabled] .btn-log:hover, 
+  .btn-log.disabled:focus, 
+  .btn-log[disabled]:focus, 
+  fieldset[disabled] .btn-log:focus, 
+  .btn-log.disabled:active, 
+  .btn-log[disabled]:active, 
+  fieldset[disabled] .btn-log:active, 
+  .btn-log.disabled.active, 
+  .btn-log[disabled].active, 
+  fieldset[disabled] .btn-log.active { 
+    background-color: #FFC312; 
+    border-color: #FFC312; 
+  } 
+   
+  .btn-log .badge { 
+    color: #FFC312; 
+    background-color: #000000; 
+  }
+
+.links {
+    color: white;
+}
+
+.links a {
+    margin-left: 5px;
+    color: rgb(197, 196, 196);
+}
+
+

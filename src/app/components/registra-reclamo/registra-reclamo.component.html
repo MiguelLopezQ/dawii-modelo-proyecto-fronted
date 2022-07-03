@@ -1,0 +1,32 @@
+<app-menu></app-menu>
+<div class="container">
+<form (ngSubmit)="insertar()">
+    <div class="form-group">
+        <label>Descripción</label>
+        <textarea class="form-control" rows="5" 
+        [(ngModel)]="reclamo.descripcion" name="description"></textarea>
+    </div>
+    <div class="form-group">
+        <label>Tipo de Reclamo</label>
+        <select class="form-control" 
+        [(ngModel)]="reclamo.tipoReclamo!.idTipoReclamo" name="tipoReclamo">
+          <option value="-1">Seleccione reclamo</option>
+          <option *ngFor="let r of tipoReclamo" value="{{r.idTipoReclamo}}">{{r.descripcion}}</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Cliente</label>
+        <select class="form-control"
+        [(ngModel)] = "reclamo.cliente!.idCliente" name="idCliente">
+          <option value="-1">Seleccione</option>
+          <option *ngFor="let c of clientes" value="{{c.idCliente}}">{{c.nombres}}</option>
+        </select>
+    </div>
+    <div class="form-group">
+      <label>Fecha de Compra</label>
+      <input type="date" class="form-control" name="fechaCompra" 
+      [(ngModel)]= "reclamo.fechaCompra"/>
+  </div>
+    <button type="submit" class="btn btn-success">Registrar</button>
+</form>
+</div>
